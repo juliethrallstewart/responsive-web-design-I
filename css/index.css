@@ -166,6 +166,19 @@ h5 {
     flex-direction: column;
 }
 
+@media (max-width: 800px) {
+    .homepage {
+        width: 98%;
+    }
+}
+
+@media (max-width: 500px) {
+    .homepage {
+        width: 100%;
+
+    }
+}
+
 .nav-hm-container {
     display: flex;
     flex-direction: row;
@@ -175,10 +188,161 @@ h5 {
     margin: 20px 0;
 }
 
+@media (max-width: 800px) {
+
+    .nav-hm-container {
+        align-items: center;
+        padding-left: 40px;
+
+    }
+
+    .nav-hm-container a {
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 500px) {
+
+    .nav-hm-container {
+        align-items: center;
+        padding-left: 0;
+
+    }
+
+    .nav-hm-container a {
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 500px) {
+
+    .nav-hm-container {
+        margin-top: 0px;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .nav-hm-container a {
+        font-size: 14px;
+        border-bottom: 1px solid black;
+        padding: 20px 0;
+        width: 100%;
+
+    }
+}
+
+
+/* viewports greater than 800px toggle off the tablet logo */
+@media (min-width: 800px) {
+    .logo-tablet-container {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .logo-tablet-container {
+        /* text-align: center; */
+        border-bottom: 1px solid black;
+        align-content: center;
+        display: flex;
+        height: 200p;
+        ;
+
+    }
+
+    .logo-tablet {
+        align-items: center;
+        padding-bottom: 20px;
+
+    }
+}
+
+/* viewports less than 800px toggle off the desktop logo and toggle on the tablet logo */
+
+@media (max-width: 800px) {
+
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-tablet-container {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .logo-tablet {
+        margin-top: 20px;
+        width: 22%;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .logo-tablet-container {
+        display: flex;
+        justify-content: center;
+        height: 75px;
+    }
+
+    .logo-tablet {
+        width: 28%;
+    }
+}
+
 .invitation>h1 {
     padding-top: 50px;
     font-size: 60px;
     line-height: 20px;
+}
+
+@media (max-width: 800px) {
+    .invitation>h1 {
+        padding-top: 20px;
+        font-size: 65px;
+        line-height: 25px;
+
+    }
+}
+
+@media (max-width: 800px) {
+    #tablet-size-headline {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .banner-container {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .invitation>h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 65px;
+        line-height: 25px;
+
+
+    }
+}
+
+@media (max-width: 500px) {
+    #tablet-size-headline {
+        font-size: 65px;
+    }
 }
 
 #get-started {
@@ -186,6 +350,23 @@ h5 {
     margin-top: -30px;
     border-radius: 0;
     background-color: white;
+}
+
+@media (max-width: 800px) {
+    #get-started {
+        font-size: 15px;
+        padding: 5px 40px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    #get-started {
+        font-size: 15px;
+        margin-top: 10px;
+        padding: 5px 40px;
+
+    }
 }
 
 .banner-container {
@@ -197,17 +378,46 @@ h5 {
 
 }
 
+@media (max-width: 800px) {
+    .banner-container {
+        justify-content: center;
+
+    }
+}
+
 .invitation {
     width: 48%;
 }
+
 
 .header-img {
     width: 48%;
 }
 
+@media (max-width: 800px) {
+
+    .header-img {
+        display: none;
+    }
+}
+
 .header-code-img {
     width: 90%;
     height: auto;
+}
+
+@media (max-width: 800px) {
+    .header-code-img {
+        display: none;
+    }
+}
+
+/* main section */
+
+@media (max-width: 500px) {
+    section {
+        margin: 0 20px;
+    }
 }
 
 .middle-img {
@@ -220,8 +430,26 @@ h5 {
     margin: 40px 0;
 }
 
+@media (max-width: 500px) {
+    .hm-container1 {
+
+        flex-direction: column;
+    }
+}
+
 .about {
     padding-left: 20px;
+}
+
+@media (max-width: 500px) {
+    .about {
+        padding-left: 0;
+
+    }
+
+    .features {
+        margin: -20px 0 20px 0;
+    }
 }
 
 .hm-container2 {
@@ -231,13 +459,41 @@ h5 {
 
 }
 
+@media (max-width: 500px) {
+    .hm-container2 {
+        flex-direction: column;
+    }
+}
+
 .infoText2 {
     padding-left: 20px;
 
 }
 
+@media (max-width: 500px) {
+    .infoText2 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .product {
+        margin: 20px 0;
+    }
+
+    .vision {
+        margin-bottom: -20px;
+    }
+}
+
 .hm-footer {
     margin-top: 40px;
+}
+
+@media (max-width: 500px) {
+    footer {
+        margin: 0 20px;
+    }
 }
 
 .hm-copyright {
@@ -377,5 +633,3 @@ button {
     text-align: center;
     padding: 40px 0;
 }
-
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
