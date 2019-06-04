@@ -200,6 +200,18 @@ h5 {
 
 }
 
+.logo-tablet-mobile {
+    width: 40%;
+}
+
+.logo-tablet-mobile-container {
+    width: 100%;
+}
+
+.logo-desktop {
+    display: none;
+}
+
 @media (min-width: 500px) {
 
     .nav-hm-container {
@@ -215,10 +227,19 @@ h5 {
 
     }
 
-    .logo-tablet {
+    .logo-tablet-mobile {
         width: 28%;
+
+    }
+
+    .logo-tablet-mobile-container {
+        margin-top: 20px;
+        ;
+
     }
 }
+
+/* viewports greater than 800px toggle off the logo-tablet-mobile img logo and toggle on the desktop logo */
 
 @media (min-width: 800px) {
 
@@ -228,41 +249,35 @@ h5 {
         width: 100%;
         justify-content: space-between;
         align-items: flex-end;
-        margin: 20px 0;
+    }
+
+    .logo-tablet-mobile {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: inline;
+
     }
 }
 
-
-.logo-desktop {
-    display: none;
-}
-
-/* viewports greater than 800px toggle off the tablet logo */
-
-
-
-.logo-tablet-container {
+.logo-tablet-mobile-container {
     display: flex;
     justify-content: center;
     height: 75px;
 }
 
-.logo-tablet {
-    width: 28%;
-}
+
+/* viewports greater than 800px toggle off the logo-tablet-mobile-container */
 
 @media (min-width: 800px) {
-    .logo-tablet-container {
-        /* text-align: center; */
-        border-bottom: 1px solid black;
-        align-content: center;
-        display: flex;
-        height: 200px;
+    .logo-tablet-mobile-container {
+        display: none;
 
 
     }
 
-    .logo-tablet {
+    .logo-tablet-mobile {
         align-items: center;
         padding-bottom: 20px;
 
@@ -270,64 +285,23 @@ h5 {
 }
 
 
-
-/* viewports less than 800px toggle off the desktop logo and toggle on the tablet logo */
-
-@media (max-width: 800px) {
-
-
-    .logo-desktop {
-        /* display: none; */
-    }
-
-    .logo-tablet-container {
-        display: flex;
-        justify-content: center;
-        height: 50px;
-    }
-
-    .logo-tablet {
-        margin-top: 20px;
-        width: 22%;
-    }
-}
-
-@media (min-width: 500px) {
-
-
-    .logo-tablet-container {
-        display: flex;
-        justify-content: center;
-        height: 75px;
-    }
-
-    .logo-tablet {
-        width: 28%;
-    }
-}
-
 .invitation>h1 {
     padding-top: 50px;
     font-size: 60px;
     line-height: 20px;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     .invitation>h1 {
-        padding-top: 20px;
+        padding-top: 50px;
         font-size: 65px;
         line-height: 25px;
 
     }
 }
 
-@media (max-width: 800px) {
-    #tablet-size-headline {
-        font-size: 65px;
-    }
-}
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
 
     .banner-container {
         display: flex;
@@ -347,7 +321,7 @@ h5 {
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     #tablet-size-headline {
         font-size: 65px;
     }
@@ -360,7 +334,7 @@ h5 {
     background-color: white;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     #get-started {
         font-size: 15px;
         padding: 5px 40px;
@@ -368,7 +342,7 @@ h5 {
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     #get-started {
         font-size: 15px;
         margin-top: 10px;
@@ -380,15 +354,15 @@ h5 {
 .banner-container {
     margin: 50px 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: container;
+    justify-content: center;
     text-align: center;
 
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     .banner-container {
-        justify-content: center;
+        justify-content: space-between;
 
     }
 }
@@ -402,30 +376,37 @@ h5 {
     width: 48%;
 }
 
-@media (max-width: 800px) {
+
+
+.header-img {
+    display: none;
+}
+
+
+
+
+@media (min-width: 800px) {
 
     .header-img {
-        display: none;
+        display: inline;
     }
-}
 
-.header-code-img {
-    width: 90%;
-    height: auto;
-}
+    .header-img {
+        width: 48%;
+    }
 
-@media (max-width: 800px) {
     .header-code-img {
-        display: none;
+        width: 90%;
+        height: auto;
     }
 }
+
 
 /* main section */
 
-@media (max-width: 500px) {
-    section {
-        margin: 0 20px;
-    }
+
+section {
+    margin: 0 20px;
 }
 
 .middle-img {
@@ -434,71 +415,83 @@ h5 {
 
 .hm-container1 {
     display: flex;
-    justify-items: space-between;
-    margin: 40px 0;
+    flex-direction: column;
+    /* justify-items: space-between; */
+    /* margin: 40px 0; */
 }
 
-@media (max-width: 500px) {
-    .hm-container1 {
 
-        flex-direction: column;
-    }
+.hm-container1 {
+
+    flex-direction: column;
+}
+
+.features {
+    /* padding-left: 20px; */
+    margin-top: 10px;
 }
 
 .about {
-    padding-left: 20px;
+    margin: 15px 0 10px 0;
+
 }
 
-@media (max-width: 500px) {
-    .about {
-        padding-left: 0;
+@media (min-width: 500px) {
+    .hm-container1 {
 
+        flex-direction: row;
     }
 
-    .features {
-        margin: -20px 0 20px 0;
+    .about {
+        margin-left: 20px;
     }
 }
 
 .hm-container2 {
     display: flex;
     justify-items: space-between;
-    margin: 40px 0;
+    flex-direction: column;
+    margin: 40px 0 0 0;
 
 }
 
-@media (max-width: 500px) {
+.services {
+    margin-bottom: 15px;
+}
+
+.product {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 500px) {
     .hm-container2 {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-.infoText2 {
-    padding-left: 20px;
 
-}
-
-@media (max-width: 500px) {
-    .infoText2 {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     .product {
-        margin: 20px 0;
+        margin-left: 20px;
+        width: 33%;
     }
 
     .vision {
-        margin-bottom: -20px;
+        width: 33%;
+        margin-left: 20px;
+    }
+
+    .services {
+        width: 33%;
     }
 }
 
 .hm-footer {
-    margin-top: 40px;
+    margin: 20px 0 0 20px;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     footer {
         margin: 0 20px;
     }
